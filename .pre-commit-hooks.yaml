@@ -1,0 +1,22 @@
+# This file declares all the hooks that our repo exposes.
+# See this for more info:
+# http://pre-commit.com/#new-hooks
+- id: yapf
+  # "id" field is used to select this hook, whereas "name" is used to display during a run.
+  name: yapf
+  # this is the actual command that gets run
+  entry: yapf
+  language: python
+  # We gotta make sure everyone runs this with the same Python interpreter.
+  # This is because yapf output will differ slightly between
+  language_version: 3.5
+  # We can only select files using their names (extensions).
+  # We should discuss whether or not we find this good.
+  files: \.py$
+  # Note that the path to the yapf.conf has to match what we have in setup.py!
+  args: [-i, --style=/etc/prototype/example_yapf.conf]
+- id: docformatter
+  name: docformatter
+  entry: docformatter
+  language: python
+  files: \.py$
