@@ -14,7 +14,7 @@
   # We should discuss whether or not we find this good.
   files: \.py$
   # Note that the path to the yapf.conf has to match what we have in setup.py!
-  args: [-i, --style=$VIRTUAL_ENV/egym_yapf.conf]
+  args: [-i, --style=etc/egym_yapf.conf]
 - id: docformatter
   name: docformatter
   entry: docformatter
