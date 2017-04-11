@@ -1,11 +1,11 @@
 # This is what we would add to any repo that we want to use our hooks to run in.
 - repo: https://github.com/Copper-Head/pre-commit-hook-prototype.git
   # Any git reference can work here (tag or commit id or even branch afaik)
-  sha: v0.4.2
+  sha: v0.1
   hooks:
   - id: yapf
   # We can also put "args" in here if we want
     args:
       - -i
-      - --style=/etc/prototype/example_yapf.conf
+      - --style=$HOME/egym_yapf.conf
   - id: docformatter
