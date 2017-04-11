@@ -9,7 +9,7 @@
   language: python
   # We gotta make sure everyone runs this with the same Python interpreter.
   # This is because yapf output will differ slightly between different versions.
-  language_version: 3.5
+  language_version: python3.5
   # We can only select files using their names (extensions).
   # We should discuss whether or not we find this good.
   files: \.py$
